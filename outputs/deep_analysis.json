@@ -1,0 +1,299 @@
+{
+  "step": "step02_deep_analysis",
+  "session_segmentation": {
+    "total_sessions": 811,
+    "active_sessions_gt_10_samples": 793,
+    "mean_session_duration_min": 26.92,
+    "median_session_duration_min": 12.5,
+    "max_session_duration_min": 98.72
+  },
+  "correlation_matrix": {
+    "Fuel Cell Total Voltage V": {
+      "Fuel Cell Total Voltage V": 1.0,
+      "Stack Current Sensor Value A": 0.2012,
+      "Stack Coolant Temp Inlet degree C": 0.2286,
+      "Stack Coolant Temp Outlet degree C": 0.2921,
+      "Air Temp Stack Outlet degree C": 0.2756,
+      "Air Flow Sensor kg/h": -0.4221,
+      "Air Comp Motor Temp degree C": 0.1212,
+      "Ambient Air Temp degree C": -0.0574,
+      "Ambient Air Pressure kPa": -0.0521,
+      "Fahrzeuggeschwindigkeit km/h": 0.3365
+    },
+    "Stack Current Sensor Value A": {
+      "Fuel Cell Total Voltage V": 0.2012,
+      "Stack Current Sensor Value A": 1.0,
+      "Stack Coolant Temp Inlet degree C": 0.253,
+      "Stack Coolant Temp Outlet degree C": 0.3874,
+      "Air Temp Stack Outlet degree C": 0.3895,
+      "Air Flow Sensor kg/h": 0.2948,
+      "Air Comp Motor Temp degree C": 0.3867,
+      "Ambient Air Temp degree C": -0.0571,
+      "Ambient Air Pressure kPa": -0.0618,
+      "Fahrzeuggeschwindigkeit km/h": 0.6239
+    },
+    "Stack Coolant Temp Inlet degree C": {
+      "Fuel Cell Total Voltage V": 0.2286,
+      "Stack Current Sensor Value A": 0.253,
+      "Stack Coolant Temp Inlet degree C": 1.0,
+      "Stack Coolant Temp Outlet degree C": 0.9464,
+      "Air Temp Stack Outlet degree C": 0.9394,
+      "Air Flow Sensor kg/h": -0.0658,
+      "Air Comp Motor Temp degree C": 0.5336,
+      "Ambient Air Temp degree C": 0.2189,
+      "Ambient Air Pressure kPa": -0.0359,
+      "Fahrzeuggeschwindigkeit km/h": 0.4633
+    },
+    "Stack Coolant Temp Outlet degree C": {
+      "Fuel Cell Total Voltage V": 0.2921,
+      "Stack Current Sensor Value A": 0.3874,
+      "Stack Coolant Temp Inlet degree C": 0.9464,
+      "Stack Coolant Temp Outlet degree C": 1.0,
+      "Air Temp Stack Outlet degree C": 0.9726,
+      "Air Flow Sensor kg/h": -0.0535,
+      "Air Comp Motor Temp degree C": 0.622,
+      "Ambient Air Temp degree C": 0.1945,
+      "Ambient Air Pressure kPa": -0.0496,
+      "Fahrzeuggeschwindigkeit km/h": 0.6108
+    },
+    "Air Temp Stack Outlet degree C": {
+      "Fuel Cell Total Voltage V": 0.2756,
+      "Stack Current Sensor Value A": 0.3895,
+      "Stack Coolant Temp Inlet degree C": 0.9394,
+      "Stack Coolant Temp Outlet degree C": 0.9726,
+      "Air Temp Stack Outlet degree C": 1.0,
+      "Air Flow Sensor kg/h": 0.0449,
+      "Air Comp Motor Temp degree C": 0.6698,
+      "Ambient Air Temp degree C": 0.2011,
+      "Ambient Air Pressure kPa": -0.0608,
+      "Fahrzeuggeschwindigkeit km/h": 0.6271
+    },
+    "Air Flow Sensor kg/h": {
+      "Fuel Cell Total Voltage V": -0.4221,
+      "Stack Current Sensor Value A": 0.2948,
+      "Stack Coolant Temp Inlet degree C": -0.0658,
+      "Stack Coolant Temp Outlet degree C": -0.0535,
+      "Air Temp Stack Outlet degree C": 0.0449,
+      "Air Flow Sensor kg/h": 1.0,
+      "Air Comp Motor Temp degree C": 0.2176,
+      "Ambient Air Temp degree C": -0.0398,
+      "Ambient Air Pressure kPa": -0.0321,
+      "Fahrzeuggeschwindigkeit km/h": 0.5037
+    },
+    "Air Comp Motor Temp degree C": {
+      "Fuel Cell Total Voltage V": 0.1212,
+      "Stack Current Sensor Value A": 0.3867,
+      "Stack Coolant Temp Inlet degree C": 0.5336,
+      "Stack Coolant Temp Outlet degree C": 0.622,
+      "Air Temp Stack Outlet degree C": 0.6698,
+      "Air Flow Sensor kg/h": 0.2176,
+      "Air Comp Motor Temp degree C": 1.0,
+      "Ambient Air Temp degree C": 0.4905,
+      "Ambient Air Pressure kPa": -0.0335,
+      "Fahrzeuggeschwindigkeit km/h": 0.6312
+    },
+    "Ambient Air Temp degree C": {
+      "Fuel Cell Total Voltage V": -0.0574,
+      "Stack Current Sensor Value A": -0.0571,
+      "Stack Coolant Temp Inlet degree C": 0.2189,
+      "Stack Coolant Temp Outlet degree C": 0.1945,
+      "Air Temp Stack Outlet degree C": 0.2011,
+      "Air Flow Sensor kg/h": -0.0398,
+      "Air Comp Motor Temp degree C": 0.4905,
+      "Ambient Air Temp degree C": 1.0,
+      "Ambient Air Pressure kPa": 0.0995,
+      "Fahrzeuggeschwindigkeit km/h": 0.0156
+    },
+    "Ambient Air Pressure kPa": {
+      "Fuel Cell Total Voltage V": -0.0521,
+      "Stack Current Sensor Value A": -0.0618,
+      "Stack Coolant Temp Inlet degree C": -0.0359,
+      "Stack Coolant Temp Outlet degree C": -0.0496,
+      "Air Temp Stack Outlet degree C": -0.0608,
+      "Air Flow Sensor kg/h": -0.0321,
+      "Air Comp Motor Temp degree C": -0.0335,
+      "Ambient Air Temp degree C": 0.0995,
+      "Ambient Air Pressure kPa": 1.0,
+      "Fahrzeuggeschwindigkeit km/h": -0.0788
+    },
+    "Fahrzeuggeschwindigkeit km/h": {
+      "Fuel Cell Total Voltage V": 0.3365,
+      "Stack Current Sensor Value A": 0.6239,
+      "Stack Coolant Temp Inlet degree C": 0.4633,
+      "Stack Coolant Temp Outlet degree C": 0.6108,
+      "Air Temp Stack Outlet degree C": 0.6271,
+      "Air Flow Sensor kg/h": 0.5037,
+      "Air Comp Motor Temp degree C": 0.6312,
+      "Ambient Air Temp degree C": 0.0156,
+      "Ambient Air Pressure kPa": -0.0788,
+      "Fahrzeuggeschwindigkeit km/h": 1.0
+    }
+  },
+  "polarization_curve": [
+    {
+      "current_bin": "(0, 10]",
+      "mean_voltage_v": 324.59,
+      "std_voltage_v": 123.31,
+      "sample_count": 37350
+    },
+    {
+      "current_bin": "(10, 20]",
+      "mean_voltage_v": 369.89,
+      "std_voltage_v": 16.96,
+      "sample_count": 29197
+    },
+    {
+      "current_bin": "(20, 30]",
+      "mean_voltage_v": 359.19,
+      "std_voltage_v": 21.49,
+      "sample_count": 14585
+    },
+    {
+      "current_bin": "(30, 40]",
+      "mean_voltage_v": 354.76,
+      "std_voltage_v": 14.95,
+      "sample_count": 12723
+    },
+    {
+      "current_bin": "(40, 50]",
+      "mean_voltage_v": 350.31,
+      "std_voltage_v": 10.57,
+      "sample_count": 12448
+    },
+    {
+      "current_bin": "(50, 60]",
+      "mean_voltage_v": 344.15,
+      "std_voltage_v": 12.04,
+      "sample_count": 12628
+    },
+    {
+      "current_bin": "(60, 70]",
+      "mean_voltage_v": 339.3,
+      "std_voltage_v": 11.7,
+      "sample_count": 12229
+    },
+    {
+      "current_bin": "(70, 80]",
+      "mean_voltage_v": 336.67,
+      "std_voltage_v": 6.16,
+      "sample_count": 10722
+    },
+    {
+      "current_bin": "(80, 90]",
+      "mean_voltage_v": 333.06,
+      "std_voltage_v": 4.96,
+      "sample_count": 9384
+    },
+    {
+      "current_bin": "(90, 100]",
+      "mean_voltage_v": 329.36,
+      "std_voltage_v": 4.83,
+      "sample_count": 9009
+    },
+    {
+      "current_bin": "(100, 110]",
+      "mean_voltage_v": 325.72,
+      "std_voltage_v": 5.06,
+      "sample_count": 8031
+    },
+    {
+      "current_bin": "(110, 120]",
+      "mean_voltage_v": 322.24,
+      "std_voltage_v": 5.22,
+      "sample_count": 6994
+    },
+    {
+      "current_bin": "(120, 130]",
+      "mean_voltage_v": 319.05,
+      "std_voltage_v": 5.12,
+      "sample_count": 6133
+    },
+    {
+      "current_bin": "(130, 140]",
+      "mean_voltage_v": 316.22,
+      "std_voltage_v": 5.32,
+      "sample_count": 4983
+    },
+    {
+      "current_bin": "(140, 150]",
+      "mean_voltage_v": 313.83,
+      "std_voltage_v": 5.46,
+      "sample_count": 4131
+    },
+    {
+      "current_bin": "(150, 160]",
+      "mean_voltage_v": 311.94,
+      "std_voltage_v": 5.71,
+      "sample_count": 3290
+    },
+    {
+      "current_bin": "(160, 170]",
+      "mean_voltage_v": 309.95,
+      "std_voltage_v": 5.89,
+      "sample_count": 2461
+    },
+    {
+      "current_bin": "(170, 180]",
+      "mean_voltage_v": 308.93,
+      "std_voltage_v": 6.52,
+      "sample_count": 1872
+    },
+    {
+      "current_bin": "(180, 190]",
+      "mean_voltage_v": 307.46,
+      "std_voltage_v": 6.49,
+      "sample_count": 1428
+    },
+    {
+      "current_bin": "(190, 200]",
+      "mean_voltage_v": 306.6,
+      "std_voltage_v": 7.57,
+      "sample_count": 1122
+    },
+    {
+      "current_bin": "(200, 210]",
+      "mean_voltage_v": 305.49,
+      "std_voltage_v": 8.59,
+      "sample_count": 983
+    },
+    {
+      "current_bin": "(210, 220]",
+      "mean_voltage_v": 302.74,
+      "std_voltage_v": 7.28,
+      "sample_count": 684
+    },
+    {
+      "current_bin": "(220, 230]",
+      "mean_voltage_v": 299.36,
+      "std_voltage_v": 6.48,
+      "sample_count": 543
+    },
+    {
+      "current_bin": "(230, 240]",
+      "mean_voltage_v": 297.53,
+      "std_voltage_v": 6.56,
+      "sample_count": 450
+    },
+    {
+      "current_bin": "(240, 250]",
+      "mean_voltage_v": 295.89,
+      "std_voltage_v": 6.82,
+      "sample_count": 416
+    },
+    {
+      "current_bin": "(250, 260]",
+      "mean_voltage_v": 294.29,
+      "std_voltage_v": 7.16,
+      "sample_count": 207
+    }
+  ],
+  "anomalies_audit": {
+    "voltage_negative_or_zero": 5,
+    "voltage_gt_400V": 2229,
+    "current_negative": 0,
+    "coolant_inlet_lt_0C": 1,
+    "coolant_outlet_gt_80C": 36,
+    "comp_motor_temp_lt_minus20C": 2,
+    "comp_motor_temp_gt_100C": 91
+  }
+}

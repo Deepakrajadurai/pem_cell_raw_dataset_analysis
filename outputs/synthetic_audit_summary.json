@@ -1,0 +1,35 @@
+{
+  "step": "step05_synthetic_generator",
+  "total_synthetic_rows": 43901,
+  "total_synthetic_sessions": 150,
+  "session_split": {
+    "train_sessions": 667,
+    "val_sessions": 83,
+    "test_sessions": 84
+  },
+  "downstream_validation_experiment": {
+    "model_a_real_train_only": {
+      "mae_volts": 16.2201,
+      "r2_score": 0.4967
+    },
+    "model_b_real_plus_synthetic": {
+      "mae_volts": 16.4004,
+      "r2_score": 0.4912
+    },
+    "delta_mae_volts": -0.1803
+  },
+  "synthetic_statistics": {
+    "voltage": {
+      "mean": 341.24,
+      "std": 47.95
+    },
+    "current": {
+      "mean": 43.88,
+      "std": 51.62
+    },
+    "power": {
+      "mean": 14.45,
+      "std": 16.4
+    }
+  }
+}

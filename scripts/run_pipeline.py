@@ -1,6 +1,6 @@
 """
 Master Pipeline Runner & Backtesting Script
-Executes Step 1, Step 2, Step 3, and Step 4 sequentially.
+Executes Step 1, Step 2, Step 3, Step 4, and Step 5 sequentially.
 """
 
 import os
@@ -11,6 +11,7 @@ from step01_analyze_dataset import run_step_1
 from step02_deep_analysis import run_step_2
 from step03_generate_charts import run_step_3
 from step04_health_indicator import run_step_4
+from step05_synthetic_generator import run_step_5
 
 def main():
     start_total = time.time()
@@ -46,6 +47,11 @@ def main():
     t4 = time.time()
     run_step_4(data_file, outputs_dir, workspace_dir=base_dir)
     print(f"--> Step 4 completed in {time.time() - t4:.2f}s\n")
+
+    # Step 5: Physics-Constrained Synthetic Generator & Audit
+    t5 = time.time()
+    run_step_5(data_file, outputs_dir, workspace_dir=base_dir)
+    print(f"--> Step 5 completed in {time.time() - t5:.2f}s\n")
 
     total_time = time.time() - start_total
     print("=================================================================")

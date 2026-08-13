@@ -53,7 +53,7 @@ Below is the comprehensive statistical summary for all 13 numeric parameters in 
 - **Current & Power Output**: Stack current peaks at **255.0 A**, delivering a maximum power output of **80.96 kW**.
 - **Polarization Curve Characteristics**: As stack current increases from 10 A to 250 A, average stack voltage drops predictably due to internal Ohmic losses and mass transport limitations.
 
-![PEM Fuel Cell Polarization & Power Curve](./polarization_curve.png)
+![PEM Fuel Cell Polarization & Power Curve](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/polarization_curve.png)
 
 #### Polarization Binned Summary Table
 | Current Range (A) | Mean Voltage (V) | Voltage Std Dev (V) | Mean Stack Power (kW) | Sample Count |
@@ -78,7 +78,7 @@ Below is the comprehensive statistical summary for all 13 numeric parameters in 
 
 The fuel cell operating profile is segmented into four distinct operational load regimes:
 
-![PEM Fuel Cell Operating Regimes Breakdown](./operating_regimes.png)
+![PEM Fuel Cell Operating Regimes Breakdown](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/operating_regimes.png)
 
 1. **Idle / System Off ($I \le 1.0\text{ A}$)**: **106,304 samples (35.6%)** — Vehicle parked or operating on battery buffer.
 2. **Low Load ($1.0\text{ A} < I \le 50.0\text{ A}$)**: **94,251 samples (31.6%)** — Low-speed city driving or cruising load.
@@ -103,7 +103,7 @@ $$\text{SoH} (\%) = \left( 1 + \frac{V_{\text{residual}}}{V_{\text{expected\_nom
 - **$V_{\text{residual}} \approx 0\text{ V}$ ($\text{SoH} \approx 100\%$)**: Stack operates in fresh state matching baseline physics.
 - **$V_{\text{residual}} < 0\text{ V}$ ($\text{SoH} < 100\%$)**: Stack exhibits irreversible voltage degradation under identical operating conditions.
 
-![Expected vs Actual Voltage Parity Plot](./v_expected_vs_actual.png)
+![Expected vs Actual Voltage Parity Plot](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/v_expected_vs_actual.png)
 
 ---
 
@@ -111,9 +111,9 @@ $$\text{SoH} (\%) = \left( 1 + \frac{V_{\text{residual}}}{V_{\text{expected\_nom
 
 Tracking $V_{\text{residual}}$ across the lifetime counter (71,492 h to 108,112 h) reveals a steady, linear voltage degradation slope:
 
-![PEM Fuel Cell Defensible Health Degradation Curve](./health_degradation_curve.png)
+![PEM Fuel Cell Defensible Health Degradation Curve](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/health_degradation_curve.png)
 
-![PEM Fuel Cell Voltage Loss Residual over Lifetime](./voltage_residual_over_hours.png)
+![PEM Fuel Cell Voltage Loss Residual over Lifetime](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/voltage_residual_over_hours.png)
 
 #### Health Indicator Trajectory Summary Table
 | Operating Hours Bin (h) | Mean $V_{\text{actual}}$ (V) | Mean $V_{\text{expected}}$ (V) | Residual $V_{\text{residual}}$ (V) | State of Health ($\text{SoH} \%$) | Active Samples |
@@ -141,7 +141,7 @@ Tracking $V_{\text{residual}}$ across the lifetime counter (71,492 h to 108,112 
 ### Representative Drive Session Time Series
 Below is a full multi-channel telemetry breakdown of a representative 65-minute driving session (Session #488):
 
-![Representative Drive Session Time Series](./sample_drive_session.png)
+![Representative Drive Session Time Series](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/sample_drive_session.png)
 
 ---
 
@@ -149,7 +149,7 @@ Below is a full multi-channel telemetry breakdown of a representative 65-minute 
 
 The heatmap below illustrates Pearson correlation coefficients ($r$) across all key physical telemetry parameters:
 
-![Parameter Pearson Correlation Matrix](./correlation_matrix.png)
+![Parameter Pearson Correlation Matrix](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/correlation_matrix.png)
 
 ---
 

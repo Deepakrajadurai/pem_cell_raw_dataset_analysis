@@ -1,6 +1,6 @@
 """
 Master Pipeline Runner & Backtesting Script
-Executes Step 1, Step 2, and Step 3 sequentially.
+Executes Step 1, Step 2, Step 3, and Step 4 sequentially.
 """
 
 import os
@@ -10,6 +10,7 @@ import time
 from step01_analyze_dataset import run_step_1
 from step02_deep_analysis import run_step_2
 from step03_generate_charts import run_step_3
+from step04_health_indicator import run_step_4
 
 def main():
     start_total = time.time()
@@ -40,6 +41,11 @@ def main():
     t3 = time.time()
     run_step_3(data_file, outputs_dir, workspace_dir=base_dir)
     print(f"--> Step 3 completed in {time.time() - t3:.2f}s\n")
+
+    # Step 4: Health Indicator & Degradation Model
+    t4 = time.time()
+    run_step_4(data_file, outputs_dir, workspace_dir=base_dir)
+    print(f"--> Step 4 completed in {time.time() - t4:.2f}s\n")
 
     total_time = time.time() - start_total
     print("=================================================================")

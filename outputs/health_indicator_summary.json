@@ -1,0 +1,267 @@
+{
+  "step": "step04_health_indicator",
+  "baseline_training_hours_cutoff": 76000.0,
+  "baseline_samples": 12550,
+  "total_monitored_samples": 169584,
+  "baseline_r2": 0.9144,
+  "baseline_mae_volts": 3.29,
+  "baseline_nominal_voltage": 342.61,
+  "degradation_trajectory": [
+    {
+      "operating_hours": 72000,
+      "mean_v_actual": 347.83,
+      "mean_v_expected": 348.15,
+      "v_residual_volts": -0.32,
+      "state_of_health_pct": 99.91,
+      "sample_count": 505
+    },
+    {
+      "operating_hours": 73000,
+      "mean_v_actual": 344.75,
+      "mean_v_expected": 345.28,
+      "v_residual_volts": -0.53,
+      "state_of_health_pct": 99.85,
+      "sample_count": 783
+    },
+    {
+      "operating_hours": 74000,
+      "mean_v_actual": 337.67,
+      "mean_v_expected": 337.68,
+      "v_residual_volts": -0.01,
+      "state_of_health_pct": 100.0,
+      "sample_count": 3659
+    },
+    {
+      "operating_hours": 75000,
+      "mean_v_actual": 339.95,
+      "mean_v_expected": 339.79,
+      "v_residual_volts": 0.16,
+      "state_of_health_pct": 100.05,
+      "sample_count": 7596
+    },
+    {
+      "operating_hours": 76000,
+      "mean_v_actual": 342.26,
+      "mean_v_expected": 342.16,
+      "v_residual_volts": 0.1,
+      "state_of_health_pct": 100.03,
+      "sample_count": 5917
+    },
+    {
+      "operating_hours": 77000,
+      "mean_v_actual": 344.32,
+      "mean_v_expected": 344.79,
+      "v_residual_volts": -0.47,
+      "state_of_health_pct": 99.86,
+      "sample_count": 1797
+    },
+    {
+      "operating_hours": 78000,
+      "mean_v_actual": 342.37,
+      "mean_v_expected": 342.41,
+      "v_residual_volts": -0.03,
+      "state_of_health_pct": 99.99,
+      "sample_count": 8037
+    },
+    {
+      "operating_hours": 79000,
+      "mean_v_actual": 342.5,
+      "mean_v_expected": 342.5,
+      "v_residual_volts": -0.0,
+      "state_of_health_pct": 100.0,
+      "sample_count": 7317
+    },
+    {
+      "operating_hours": 80000,
+      "mean_v_actual": 342.02,
+      "mean_v_expected": 342.12,
+      "v_residual_volts": -0.1,
+      "state_of_health_pct": 99.97,
+      "sample_count": 5025
+    },
+    {
+      "operating_hours": 85000,
+      "mean_v_actual": 342.94,
+      "mean_v_expected": 346.11,
+      "v_residual_volts": -3.17,
+      "state_of_health_pct": 99.07,
+      "sample_count": 645
+    },
+    {
+      "operating_hours": 86000,
+      "mean_v_actual": 343.37,
+      "mean_v_expected": 344.66,
+      "v_residual_volts": -1.28,
+      "state_of_health_pct": 99.63,
+      "sample_count": 5821
+    },
+    {
+      "operating_hours": 87000,
+      "mean_v_actual": 342.23,
+      "mean_v_expected": 342.78,
+      "v_residual_volts": -0.55,
+      "state_of_health_pct": 99.84,
+      "sample_count": 6637
+    },
+    {
+      "operating_hours": 88000,
+      "mean_v_actual": 341.04,
+      "mean_v_expected": 341.56,
+      "v_residual_volts": -0.52,
+      "state_of_health_pct": 99.85,
+      "sample_count": 6225
+    },
+    {
+      "operating_hours": 89000,
+      "mean_v_actual": 341.9,
+      "mean_v_expected": 342.04,
+      "v_residual_volts": -0.13,
+      "state_of_health_pct": 99.96,
+      "sample_count": 7273
+    },
+    {
+      "operating_hours": 90000,
+      "mean_v_actual": 344.75,
+      "mean_v_expected": 344.41,
+      "v_residual_volts": 0.34,
+      "state_of_health_pct": 100.1,
+      "sample_count": 6776
+    },
+    {
+      "operating_hours": 91000,
+      "mean_v_actual": 342.75,
+      "mean_v_expected": 343.17,
+      "v_residual_volts": -0.42,
+      "state_of_health_pct": 99.88,
+      "sample_count": 7776
+    },
+    {
+      "operating_hours": 92000,
+      "mean_v_actual": 342.56,
+      "mean_v_expected": 342.44,
+      "v_residual_volts": 0.12,
+      "state_of_health_pct": 100.04,
+      "sample_count": 7410
+    },
+    {
+      "operating_hours": 93000,
+      "mean_v_actual": 342.24,
+      "mean_v_expected": 342.63,
+      "v_residual_volts": -0.39,
+      "state_of_health_pct": 99.89,
+      "sample_count": 7855
+    },
+    {
+      "operating_hours": 94000,
+      "mean_v_actual": 343.68,
+      "mean_v_expected": 344.81,
+      "v_residual_volts": -1.13,
+      "state_of_health_pct": 99.67,
+      "sample_count": 5836
+    },
+    {
+      "operating_hours": 95000,
+      "mean_v_actual": 344.72,
+      "mean_v_expected": 345.59,
+      "v_residual_volts": -0.87,
+      "state_of_health_pct": 99.75,
+      "sample_count": 5784
+    },
+    {
+      "operating_hours": 96000,
+      "mean_v_actual": 345.19,
+      "mean_v_expected": 346.04,
+      "v_residual_volts": -0.85,
+      "state_of_health_pct": 99.75,
+      "sample_count": 6976
+    },
+    {
+      "operating_hours": 97000,
+      "mean_v_actual": 347.0,
+      "mean_v_expected": 348.18,
+      "v_residual_volts": -1.17,
+      "state_of_health_pct": 99.66,
+      "sample_count": 1266
+    },
+    {
+      "operating_hours": 98000,
+      "mean_v_actual": 340.52,
+      "mean_v_expected": 342.4,
+      "v_residual_volts": -1.88,
+      "state_of_health_pct": 99.45,
+      "sample_count": 3298
+    },
+    {
+      "operating_hours": 99000,
+      "mean_v_actual": 343.87,
+      "mean_v_expected": 345.02,
+      "v_residual_volts": -1.14,
+      "state_of_health_pct": 99.67,
+      "sample_count": 6780
+    },
+    {
+      "operating_hours": 100000,
+      "mean_v_actual": 342.22,
+      "mean_v_expected": 343.72,
+      "v_residual_volts": -1.49,
+      "state_of_health_pct": 99.56,
+      "sample_count": 7934
+    },
+    {
+      "operating_hours": 101000,
+      "mean_v_actual": 341.84,
+      "mean_v_expected": 342.74,
+      "v_residual_volts": -0.9,
+      "state_of_health_pct": 99.74,
+      "sample_count": 8313
+    },
+    {
+      "operating_hours": 102000,
+      "mean_v_actual": 345.37,
+      "mean_v_expected": 346.41,
+      "v_residual_volts": -1.04,
+      "state_of_health_pct": 99.7,
+      "sample_count": 6743
+    },
+    {
+      "operating_hours": 103000,
+      "mean_v_actual": 341.29,
+      "mean_v_expected": 343.17,
+      "v_residual_volts": -1.89,
+      "state_of_health_pct": 99.45,
+      "sample_count": 7141
+    },
+    {
+      "operating_hours": 104000,
+      "mean_v_actual": 347.55,
+      "mean_v_expected": 349.32,
+      "v_residual_volts": -1.77,
+      "state_of_health_pct": 99.48,
+      "sample_count": 3245
+    },
+    {
+      "operating_hours": 106000,
+      "mean_v_actual": 341.86,
+      "mean_v_expected": 343.07,
+      "v_residual_volts": -1.21,
+      "state_of_health_pct": 99.65,
+      "sample_count": 1495
+    },
+    {
+      "operating_hours": 107000,
+      "mean_v_actual": 342.61,
+      "mean_v_expected": 344.09,
+      "v_residual_volts": -1.48,
+      "state_of_health_pct": 99.57,
+      "sample_count": 7048
+    },
+    {
+      "operating_hours": 108000,
+      "mean_v_actual": 344.38,
+      "mean_v_expected": 345.28,
+      "v_residual_volts": -0.91,
+      "state_of_health_pct": 99.73,
+      "sample_count": 670
+    }
+  ]
+}

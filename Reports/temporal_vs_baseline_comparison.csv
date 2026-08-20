@@ -1,0 +1,8 @@
+Architecture,Feature_Set,Test_R2,Test_MAE,Test_RMSE
+LightGBM (Baseline),Full Features,0.7244,0.8136,2.0193
+LSTM,Full Features,0.5898,1.0924,2.4631
+GRU,Full Features,0.6124,1.0456,2.3942
+LSTM,Voltage-Blind,0.2814,1.6422,3.2641
+GRU,Voltage-Blind,0.315,1.5842,3.1865
+LSTM,Physics-Only,0.5412,1.1852,2.6048
+GRU,Physics-Only,0.5645,1.1298,2.5381

@@ -1,0 +1,19 @@
+{
+    "raw_total_rows": 302212,
+    "resampled_total_rows": 320803,
+    "active_total_rows": 200231,
+    "total_sessions": 811,
+    "invalid_sanitization_counts": {
+        "voltage_invalid": 0,
+        "t_comp_invalid": 37,
+        "p_amb_invalid": 0
+    },
+    "valid_r_est_samples": 98596,
+    "total_energy_delivered_kwh": 4572.501629465172,
+    "total_high_current_hours": 15.32222222222424,
+    "splits_session_counts": {
+        "train": 567,
+        "validation": 122,
+        "test": 122
+    }
+}

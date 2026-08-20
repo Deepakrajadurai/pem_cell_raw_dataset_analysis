@@ -1,0 +1,18 @@
+{
+    "timestamps_monotonic_per_session": true,
+    "max_internal_session_gap_seconds": 4.0,
+    "no_internal_session_gap_over_300s": true,
+    "v_out_of_bounds_count": 0,
+    "tcomp_out_of_bounds_count": 0,
+    "pamb_out_of_bounds_count": 0,
+    "dt_resampled_mode_seconds": 4.0,
+    "p_stack_min_kw": 0.0,
+    "p_stack_max_kw": 80.96,
+    "e_cum_monotonic": true,
+    "high_current_duration_monotonic": true,
+    "r_est_valid_count": 98596,
+    "r_est_min_ohm": 0.0,
+    "r_est_max_ohm": 14.363636363636363,
+    "session_splits_disjoint": true,
+    "splits_chronological_sequence": true
+}

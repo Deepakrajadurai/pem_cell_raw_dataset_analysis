@@ -19,7 +19,6 @@
 | **Nominal Sampling Interval** | **4 seconds** (Median & Mode: 4.0 s) |
 | **Sampling Characteristics** | Non-continuous (Intermittent driving sessions with gaps during system shutoff) |
 | **Estimated Energy Delivered** | **7,153.93 kWh** |
-| **Baseline Model Accuracy** | **$R^2 = 0.9144$**, **$\text{MAE} = 3.29\text{ V}$** |
 
 ---
 
@@ -53,7 +52,7 @@ Below is the comprehensive statistical summary for all 13 numeric parameters in 
 - **Current & Power Output**: Stack current peaks at **255.0 A**, delivering a maximum power output of **80.96 kW**.
 - **Polarization Curve Characteristics**: As stack current increases from 10 A to 250 A, average stack voltage drops predictably due to internal Ohmic losses and mass transport limitations.
 
-![PEM Fuel Cell Polarization & Power Curve](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/polarization_curve.png)
+![PEM Fuel Cell Polarization & Power Curve](C:\Users\vijayakr\.gemini\antigravity-ide\brain\59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3\polarization_curve.png)
 
 #### Polarization Binned Summary Table
 | Current Range (A) | Mean Voltage (V) | Voltage Std Dev (V) | Mean Stack Power (kW) | Sample Count |
@@ -78,7 +77,7 @@ Below is the comprehensive statistical summary for all 13 numeric parameters in 
 
 The fuel cell operating profile is segmented into four distinct operational load regimes:
 
-![PEM Fuel Cell Operating Regimes Breakdown](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/operating_regimes.png)
+![PEM Fuel Cell Operating Regimes Breakdown](C:\Users\vijayakr\.gemini\antigravity-ide\brain\59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3\operating_regimes.png)
 
 1. **Idle / System Off ($I \le 1.0\text{ A}$)**: **106,304 samples (35.6%)** — Vehicle parked or operating on battery buffer.
 2. **Low Load ($1.0\text{ A} < I \le 50.0\text{ A}$)**: **94,251 samples (31.6%)** — Low-speed city driving or cruising load.
@@ -87,49 +86,7 @@ The fuel cell operating profile is segmented into four distinct operational load
 
 ---
 
-## 4. Defensible Health Indicator (HI) & Voltage Degradation Model
-
-To establish a defensible degradation index before generating synthetic data, a baseline physical regressor is trained on early operational hours ($\text{Hours} \le 76,000\text{ h}$):
-
-$$V_{\text{expected}} = f(I, T_{\text{coolant\_in}}, T_{\text{coolant\_out}}, T_{\text{air}}, \text{Airflow}, \text{Ambient\_Temp}, \text{Ambient\_Pressure})$$
-
-### Residual Voltage & State of Health Formulation
-For each operating sample, the voltage loss residual $V_{\text{residual}}$ and normalized State of Health ($\text{SoH} \%$) are evaluated:
-
-$$V_{\text{residual}} = V_{\text{actual}} - V_{\text{expected}}$$
-
-$$\text{SoH} (\%) = \left( 1 + \frac{V_{\text{residual}}}{V_{\text{expected\_nominal}}} \right) \times 100\%$$
-
-- **$V_{\text{residual}} \approx 0\text{ V}$ ($\text{SoH} \approx 100\%$)**: Stack operates in fresh state matching baseline physics.
-- **$V_{\text{residual}} < 0\text{ V}$ ($\text{SoH} < 100\%$)**: Stack exhibits irreversible voltage degradation under identical operating conditions.
-
-![Expected vs Actual Voltage Parity Plot](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/v_expected_vs_actual.png)
-
----
-
-### Degradation Trajectory over Lifetime (`Kumulative Betriebszeit h`)
-
-Tracking $V_{\text{residual}}$ across the lifetime counter (71,492 h to 108,112 h) reveals a steady, linear voltage degradation slope:
-
-![PEM Fuel Cell Defensible Health Degradation Curve](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/health_degradation_curve.png)
-
-![PEM Fuel Cell Voltage Loss Residual over Lifetime](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/voltage_residual_over_hours.png)
-
-#### Health Indicator Trajectory Summary Table
-| Operating Hours Bin (h) | Mean $V_{\text{actual}}$ (V) | Mean $V_{\text{expected}}$ (V) | Residual $V_{\text{residual}}$ (V) | State of Health ($\text{SoH} \%$) | Active Samples |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| **74,000 h** | 337.67 | 337.66 | 0.00 | **100.00%** | 3,659 |
-| **76,000 h** *(Baseline Cutoff)* | 342.26 | 342.16 | +0.10 | **100.03%** | 5,917 |
-| **80,000 h** | 342.02 | 342.11 | -0.09 | **99.97%** | 5,025 |
-| **86,000 h** | 343.37 | 344.66 | -1.28 | **99.63%** | 5,821 |
-| **94,000 h** | 343.68 | 344.91 | -1.23 | **99.65%** | 5,836 |
-| **100,000 h** | 342.22 | 343.77 | -1.54 | **99.56%** | 7,934 |
-| **103,000 h** | 341.29 | 343.17 | -1.88 | **99.46%** | 7,141 |
-| **107,000 h** | 342.61 | 344.06 | -1.45 | **99.58%** | 7,048 |
-
----
-
-## 5. Drive Session & Time Series Temporal Dynamics
+## 4. Drive Session & Time Series Temporal Dynamics
 
 - **Total Drive Sessions Detected**: **811 distinct driving sessions** (defined by inter-sample gaps $> 5\text{ minutes}$).
 - **Valid Active Sessions ($> 10\text{ samples}$)**: **793 sessions**.
@@ -141,42 +98,53 @@ Tracking $V_{\text{residual}}$ across the lifetime counter (71,492 h to 108,112 
 ### Representative Drive Session Time Series
 Below is a full multi-channel telemetry breakdown of a representative 65-minute driving session (Session #488):
 
-![Representative Drive Session Time Series](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/sample_drive_session.png)
+![Representative Drive Session Time Series](C:\Users\vijayakr\.gemini\antigravity-ide\brain\59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3\sample_drive_session.png)
 
 ---
 
-## 6. Parameter Correlation Matrix
+## 5. Parameter Correlation Matrix
 
 The heatmap below illustrates Pearson correlation coefficients ($r$) across all key physical telemetry parameters:
 
-![Parameter Pearson Correlation Matrix](C:/Users/vijayakr/.gemini/antigravity-ide/brain/59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3/correlation_matrix.png)
+![Parameter Pearson Correlation Matrix](C:\Users\vijayakr\.gemini\antigravity-ide\brain\59a3a9d7-4e23-4a0b-ba43-c6464ce27fe3\correlation_matrix.png)
+
+### Key Correlation Insights
+- **Current vs. Vehicle Speed ($r = 0.62$)**: Strong positive coupling reflecting direct power demand driven by vehicle dynamics.
+- **Current vs. Coolant Outlet Temp ($r = 0.39$)**: Ohmic and electrochemical heat generation elevates coolant temperature with current.
+- **Air Flow vs. Vehicle Speed ($r = 0.50$)**: Air mass flow scales proportionally to supply oxygen stoichiometry for power demand.
+- **Coolant Inlet vs. Outlet Temp ($r = 0.95$)**: High thermal coupling across the stack cooling jacket.
 
 ---
 
-## 7. Data Quality & Anomaly Audit
+## 6. Data Quality & Anomaly Audit
 
 > [!WARNING]
-> The raw dataset contains several sensor anomalies and missing data gaps that require preprocessing prior to synthetic data generation or model training:
+> The raw dataset contains several sensor anomalies and missing data gaps that require preprocessing prior to model training or degradation analysis:
 
 1. **Negative Voltage Glitches**: **1,850 rows** exhibit invalid negative voltages (min down to **-500.0 V**). These correspond to sensor power-down states or signal disconnects during system shutoff.
 2. **Air Compressor Temperature Glitches**: **24 rows** record negative values down to **-50.0 °C**, representing transient CAN-bus communication drops.
 3. **Missing Data Rates**:
    - `Kumulative Betriebszeit h` and `Fahrzeuggeschwindigkeit km/h` have **6.5% missing values** (~19,700 rows).
    - Core sensor streams (`Voltage`, `Current`, `Coolant Temps`, `Air Flow`) have **~1.1% – 1.3% missing values** (~3,200 – 3,900 rows).
+4. **Time Continuity**: Gaps between sessions range up to **96.9 days**, confirming the file represents a multi-year collection of intermittent drive cycles rather than a single continuous run.
 
 ---
 
-## 8. Engineering Recommendations for Synthetic Data Generation
+## 7. Engineering Recommendations for Modeling & Preprocessing
 
 > [!TIP]
-> To generate realistic synthetic PEM fuel cell degradation time series:
+> To utilize this dataset for Remaining Useful Life (RUL) estimation, State of Health (SoH) monitoring, or digital twin development:
 
-1. **Condition Synthetic Generation on Health Index ($\text{SoH}$)**:
-   - Use the computed $V_{\text{residual}}$ trajectory to modulate cell polarization voltage loss over target synthetic operating hours.
-2. **Preserve Operational Load Regimes**:
-   - Maintain the empirical load probability density (35.6% Idle, 31.6% Low Load, 28.2% Medium Load, 4.5% High Load).
-3. **Condition on Thermal & Reactant Physics**:
-   - Ensure synthetic air flow follows current demand ($r = 0.29 - 0.50$) and coolant temperature gradient scales with stack electrical power output.
+1. **Filtering Invalid Data**:
+   - Filter rows where `Fuel Cell Total Voltage V <= 0` or `Stack Current Sensor Value A < 0`.
+   - Remove temperature outliers outside physical operating bounds (e.g. $T < -10\text{ °C}$ or $T > 120\text{ °C}$).
+2. **Session Segmentation**:
+   - Treat each drive cycle (separated by $> 5\text{ min}$ gap) as an independent sequence time series.
+   - Do not compute rolling derivatives (e.g. $dI/dt$, $dT/dt$) across session boundaries.
+3. **Feature Engineering**:
+   - **Internal Resistance ($R_{est}$)**: Compute $R_{est} = \frac{\Delta V}{\Delta I}$ during load transients.
+   - **Stoichiometry Ratio**: Ratio of `Air Flow Sensor kg/h` to `Stack Current Sensor Value A`.
+   - **Cumulative Energy Throughput**: Integrate electrical power over operational hours for degradation modeling.
 
 ---
 *Report auto-generated by AI Data Analytics Agent.*

@@ -93,7 +93,31 @@ All models evaluated on identical test split (`test.parquet`, Sessions $690 \dot
 
 ---
 
-## 4. Key Scientific Insights
+## 4. Exact 16-Feature Input Set & Target Definition
+
+### The 16 Features Passed into Tree & Recurrent Models:
+1. `Stack Current Sensor Value A`
+2. `Fuel Cell Total Voltage V`
+3. `Stack Coolant Temp Inlet degree C`
+4. `Stack Coolant Temp Outlet degree C`
+5. `Air Temp Stack Outlet degree C`
+6. `Air Flow Sensor kg/h`
+7. `Air Comp Motor Temp degree C`
+8. `Ambient Air Temp degree C`
+9. `Ambient Air Pressure kPa`
+10. `Fahrzeuggeschwindigkeit km/h`
+11. `Stack Power kW`
+12. `Air_Stoichiometry_Lambda`
+13. `Delta_V_Nernst`
+14. `E_cum_kWh`
+15. `high_current_duration_h`
+16. `Cumulative Time h`
+
+**Target**: `soh_target` (EMA-smoothed physical State of Health ratio relative to BOL reference and Nernst environmental correction).
+
+---
+
+## 5. Key Scientific Insights
 
 1. **LightGBM Superiority ($R^2 = 0.724$)**: Tabular gradient boosted decision trees capture non-linear interactions across operational variables without requiring explicit sub-component electrochemical calibration.
 2. **Voltage Feature Criticality**: Excluding voltage features deteriorates recurrent models by $56.5\%$, proving electrical voltage under load is the primary observable degradation carrier.
@@ -101,7 +125,7 @@ All models evaluated on identical test split (`test.parquet`, Sessions $690 \dot
 
 ---
 
-## 5. Software Sitemap & Execution Guide
+## 6. Software Sitemap & Execution Guide
 
 To reproduce all experiments from raw data to final master reports:
 
@@ -131,6 +155,7 @@ python 08_compare_models.py
 ```
 
 ### Main Documentation Reports
+- [`feature_set_verification_report.md`](file:///d:/PEM_Cell_Dataset/feature_set_verification_report.md): Exact 16-feature list and target leakage audit.
 - [`soh_target_and_pipeline_justification_report.md`](file:///d:/PEM_Cell_Dataset/soh_target_and_pipeline_justification_report.md): Technical justification for sanitization, $R_{\text{est}}$ gating, $\text{SoH}$ target derivation, and model selection.
 - [`pinn_ekf_final_research_report.md`](file:///d:/PEM_Cell_Dataset/pinn_ekf_final_research_report.md): Comprehensive evaluation report on PINN & PINN-EKF architectures.
 - [`soh_baseline_results.md`](file:///d:/PEM_Cell_Dataset/soh_baseline_results.md): Baseline models analysis.
